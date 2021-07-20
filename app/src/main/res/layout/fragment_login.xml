@@ -79,10 +79,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:background="@drawable/round_corner_buttom"
+                android:onClick="@{() -> viewModel.login()}"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="@string/sign_in"
-                android:onClick="@{() -> viewModel.login()}"
                 android:textColor="#777" />
 
             <TextView
@@ -117,23 +117,23 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="15dp"
-                    android:onClick="@{() -> viewModel.login()}"
-                    android:background="@drawable/google" />
+                    android:background="@drawable/google"
+                    android:onClick="@{() -> viewModel.login()}" />
 
                 <ImageButton
                     android:id="@+id/button_facebook"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginRight="15dp"
-                    android:onClick="@{() -> viewModel.login()}"
-                    android:background="@drawable/facebook_box" />
+                    android:background="@drawable/facebook_box"
+                    android:onClick="@{() -> viewModel.login()}" />
 
                 <ImageButton
                     android:id="@+id/button_twitter"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:onClick="@{() -> viewModel.login()}"
-                    android:background="@drawable/twitter" />
+                    android:background="@drawable/twitter"
+                    android:onClick="@{() -> viewModel.login()}" />
             </LinearLayout>
 
 

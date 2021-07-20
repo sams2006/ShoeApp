@@ -43,30 +43,30 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="?actionBarSize"
-                android:textSize="40sp"
-                android:textColor="@color/white"
                 android:layout_gravity="center"
-                android:textStyle="bold"
-                android:text="@string/instruction"/>
+                android:layout_marginTop="?actionBarSize"
+                android:text="@string/instruction"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="7dp"
                 android:text="@string/instructions_text_view"
-                android:textColor="@color/white"
-                android:layout_gravity="center"/>
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/button_start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:onClick="@{() -> viewModel.instruction()}"
-                android:textColor="#777"
                 android:layout_marginTop="?actionBarSize"
-                android:text="@string/start"/>
+                android:onClick="@{() -> viewModel.instruction()}"
+                android:text="@string/start"
+                android:textColor="#777" />
 
         </LinearLayout>
 

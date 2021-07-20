@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.shoeapp.databinding.ActivityMainBinding
 
@@ -17,11 +18,15 @@ class MainActivity : AppCompatActivity() {
         val binding: ActivityMainBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        val navController = this.findNavController(R.id.nav_host)
+        // Because we're creating the NavHostFragment using FragmentContainerView, we must
+        // retrieve the NavController directly from the NavHostFragment instead
+        //val navController = this.findNavController(R.id.nav_host)
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
+        val navController = navHostFragment.navController
 
         NavigationUI.setupActionBarWithNavController(this, navController)
-
-
 
     }
 
@@ -31,15 +36,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater= menuInflater
-        inflater.inflate(R.menu.menu,menu)
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host)
-        return NavigationUI.onNavDestinationSelected(item , navController)
+        return NavigationUI.onNavDestinationSelected(item, navController)
     }
 
 

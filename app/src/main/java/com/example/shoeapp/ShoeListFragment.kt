@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import coil.load
 import com.example.shoeapp.databinding.FragmentInstructionBinding
 import com.example.shoeapp.databinding.FragmentLoginBinding
 import com.example.shoeapp.databinding.FragmentShoeListBinding
@@ -51,6 +52,7 @@ class ShoeListFragment : Fragment() {
           itemInflater.size.text = getString(R.string.size_value , shoe.size.toString())
           itemInflater.company.text = getString(R.string.company_value , shoe.company)
           itemInflater.description.text = getString(R.string.description_value ,shoe.description)
+
 
         binding.linearLayout.addView(itemInflater.root)
     }

@@ -1,13 +1,12 @@
 package com.example.shoeapp
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
+@androidx.room.Entity()
 data class Shoe (
+
     var name: String,
     var size: Double,
     var company: String,
-    var description: String,
-    val images: List<String> = mutableListOf()
-): Parcelable
+    var description: String
+)

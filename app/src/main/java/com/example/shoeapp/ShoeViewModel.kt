@@ -81,6 +81,7 @@ class ShoeViewModel:ViewModel() {
 
     private fun createSampleShoes():List<Shoe>{
         val shoe = mutableListOf<Shoe>()
+
         shoe.add(Shoe("jordan",12.5 , "Adidas" , "The best for sport"))
         shoe.add(Shoe("jordan",12.5 , "Adidas" , "The best for sport"))
 
